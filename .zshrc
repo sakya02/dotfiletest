@@ -94,7 +94,7 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 # configs
-alias cfb='vim ~/.bashrc'
+#alias cfb='vim ~/.bashrc'
 alias cfz='vim ~/.zshrc'
 alias cfr='vim ~/.config/ranger/rc.conf'
 alias cfi='vim ~/.config/i3/config'
