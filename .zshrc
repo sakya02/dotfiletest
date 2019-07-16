@@ -83,6 +83,17 @@ source $ZSH/oh-my-zsh.sh
 
 # ssh
 # export SSH_KEY_PATH="~/.ssh/rsa_id"
+# Start ssh agent
+function ssh_agent_run (){
+	eval $(ssh-agent)
+	ssh-add -D
+}
+
+# add key to agent
+function ssh_agent_add_key (){
+	local -r key_name="$1"
+	ssh-add "$HOME/.ssh/$key_name"
+}
 
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
@@ -107,7 +118,7 @@ alias progs="(pacman -Qet && pacman -Qm) | sort -u" # List programs I've install
 alias orphans="pacman -Qdt" # List orphan programs
 alias sdn="sudo shutdown now"
 alias ls='ls -hN --color=auto --group-directories-first'
-alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
+alias config='/usr/bin/git --git-dir=$HOME/.gitcfg/ --work-tree=$HOME'
 
 # misc
 weath() { curl wttr.in/$1 ;} # Check the weather (give city or leave blank).
