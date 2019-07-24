@@ -22,8 +22,8 @@ for_window [class="^.*"] border pixel 3
 for_window [class="Yad"] floating enable
 gaps inner 15
 gaps outer 15
-font Monofur Nerd Font Mono
-#font pango:mono 12
+#font Monofur Nerd Font Mono
+font pango:mono 12
 set $mod Mod4
 set $term --no-startup-id urxvt
 
@@ -124,7 +124,7 @@ bindsym $mod+f			fullscreen toggle
 ##bindsym $mod+Shift+f
 
 bindsym $mod+g			workspace prev
-bindsym $mod+Shift+g		exec --no-startup-id gimp; workspace $ws5
+bindsym $mod+Shift+g		exec --no-startup-id discord; workspace $ws2
 
 bindsym $mod+h			focus left
 bindsym $mod+Shift+h		move left 30
