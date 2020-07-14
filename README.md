@@ -1,3 +1,0 @@
-# dotfiletest
-
-some texty text
